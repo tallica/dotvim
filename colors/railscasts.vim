@@ -26,12 +26,12 @@ let g:colors_name = "railscasts"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E0DB guibg=#232323
-hi Cursor                    guibg=#FFFFFF
+hi Normal                    guifg=#E6E0DB ctermfg=15 guibg=#232323 ctermbg=0
+hi Cursor                    guibg=#FFFFFF ctermfg=8
 hi CursorLine                guibg=#333435
-hi LineNr                    guifg=#9D9B96 guibg=#232323
-hi Search                    guibg=#5A647E
-hi Visual                    guibg=#5A647E
+hi LineNr                    guifg=#9D9B96 ctermfg=7 guibg=#232323 ctermbg=0
+hi Search                    guibg=#5A647E ctermbg=8
+hi Visual                    guibg=#5A647E ctermbg=8
 
 " Folds
 " -----
@@ -41,7 +41,7 @@ hi Folded                    guifg=#F6F3E8 guibg=#444444 gui=NONE
 " Misc
 " ----
 " directory names and other special names in listings
-hi Directory                 guifg=#A5C261 gui=NONE
+hi Directory                 guifg=#A5C261 ctermfg=10 gui=NONE
 
 " Popup Menu
 " ----------
@@ -56,61 +56,61 @@ hi PMenuThumb                guibg=#AAAAAA gui=NONE
 
 
 "rubyComment
-hi Comment                   guifg=#BC9458 gui=italic
-hi Todo                      guifg=#BC9458 guibg=NONE gui=italic
+hi Comment                   guifg=#BC9458 ctermfg=3 gui=italic
+hi Todo                      guifg=#BC9458 ctermfg=3 guibg=NONE gui=italic
 
 "rubyPseudoVariable
 "nil, self, symbols, etc
-hi Constant                  guifg=#6D9CBE
+hi Constant                  guifg=#6D9CBE ctermfg=12
 
 "rubyClass, rubyModule, rubyDefine
 "def, end, include, etc
-hi Define                    guifg=#CC7833
+hi Define                    guifg=#CC7833 ctermfg=9
 
 "rubyInterpolation
-hi Delimiter                 guifg=#519F50
+hi Delimiter                 guifg=#519F50 ctermfg=2
 
 "rubyError, rubyInvalidVariable
 hi Error                     guifg=#FFFFFF guibg=#990000
 
 "rubyFunction
-hi Function                  guifg=#FFC66D gui=NONE
+hi Function                  guifg=#FFC66D ctermfg=11 gui=NONE
 
 "rubyIdentifier
 "@var, @@var, $var, etc
-hi Identifier                guifg=#D0D0FF gui=NONE
+hi Identifier                guifg=#AD7FA8 ctermfg=13 gui=NONE
 
 "rubyInclude
 "include, autoload, extend, load, require
-hi Include                   guifg=#CC7833 gui=NONE
+hi Include                   guifg=#CC7833 ctermfg=9 gui=NONE
 
 "rubyKeyword, rubyKeywordAsMethod
 "alias, undef, super, yield, callcc, caller, lambda, proc
-hi Keyword                   guifg=#CC7833
+hi Keyword                   guifg=#CC7833 ctermfg=9
 
 " same as define
-hi Macro                     guifg=#CC7833 gui=NONE
+hi Macro                     guifg=#CC7833 ctermfg=9 gui=NONE
 
 "rubyInteger
-hi Number                    guifg=#A5C261
+hi Number                    guifg=#A5C261 ctermfg=10
 
 " #if, #else, #endif
-hi PreCondit                 guifg=#CC7833 gui=NONE
+hi PreCondit                 guifg=#CC7833 ctermfg=9 gui=NONE
 
 " generic preprocessor
-hi PreProc                   guifg=#CC7833 gui=NONE
+hi PreProc                   guifg=#CC7833 ctermfg=9 gui=NONE
 
 "rubyControl, rubyAccess, rubyEval
 "case, begin, do, for, if unless, while, until else, etc.
-hi Statement                 guifg=#CC7833 gui=NONE
+hi Statement                 guifg=#CC7833 ctermfg=9 gui=NONE
 
 "rubyString
-hi String                    guifg=#A5C261
+hi String                    guifg=#A5C261 ctermfg=10
 
 hi Title                     guifg=#FFFFFF
 
 "rubyConstant
-hi Type                      guifg=#DA4939 gui=NONE
+hi Type                      guifg=#DA4939 ctermfg=1 gui=NONE
 
 hi DiffAdd                   guifg=#E6E1DC guibg=#144212
 hi DiffDelete                guifg=#E6E1DC guibg=#660000

@@ -18,16 +18,25 @@ endif
 let g:colors_name = "railscasts"
 
 " Colors
-" Brown        #BC9458
-" Dark Blue    #6D9CBE
-" Dark Green   #519F50
-" Dark Orange  #CC7833
-" Light Blue   #D0D0FF
-" Light Green  #A5C261
-" Tan          #FFC66D
+"  0 #232323
+"  1 #DA4939
+"  2 #519F50
+"  3 #BC9458
+"  4 #3465A4
+"  5 #75507B
+"  6 #06989A
+"  7 #9D9B96
+"  8 #5A647E
+"  9 #CC7833
+" 10 #A5C261
+" 11 #FFC66D
+" 12 #6D9CBE
+" 13 #AD7FA8
+" 14 #34E2E2
+" 15 #E6E0DB
 
 hi Normal                    guifg=#E6E0DB ctermfg=15 guibg=#232323 ctermbg=0
-hi Cursor                    guibg=#FFFFFF ctermfg=8
+hi Cursor                    guibg=#5A647E ctermfg=8
 hi CursorLine                guibg=#333435
 hi LineNr                    guifg=#9D9B96 ctermfg=7 guibg=#232323 ctermbg=0
 hi Search                    guibg=#5A647E ctermbg=8

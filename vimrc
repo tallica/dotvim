@@ -57,3 +57,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
 nmap ,o o<Esc><Up>
 nmap ,O O<Esc><Down>
 
+"SmoothPageScroll
+map <PageDown> :call SmoothPageScrollDown()<CR>
+map <PageUp>   :call SmoothPageScrollUp()<CR>
+let g:smooth_page_scroll_delay = 1

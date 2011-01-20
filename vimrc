@@ -1,27 +1,35 @@
 set nocompatible
 set backspace=indent,eol,start
-set smartindent
-set autoindent
 set nobackup
 set number
 set nowrap
-"set history=32
+set history=32
 set ruler
 set showcmd
 set incsearch
 set nohlsearch
-set expandtab
-set tabstop=2
-set shiftwidth=2
-"set paste
 set ruler
 set scrolloff=10
 set updatecount=50
-set smarttab
+set laststatus=2
+set novisualbell
 set ofu=syntaxcomplete#Complete
+
+"formatting
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+set autoindent
+set smartindent
+set cindent
+
 filetype plugin on
 filetype plugin indent on
 syntax on
+
+"tmp files
+set directory=/var/tmp/vim
 
 call pathogen#runtime_append_all_bundles()
 

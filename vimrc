@@ -4,7 +4,6 @@ set nobackup
 set number
 set nowrap
 set history=32
-set ruler
 set showcmd
 set incsearch
 set nohlsearch
@@ -24,6 +23,10 @@ set smarttab
 set autoindent
 set smartindent
 set cindent
+
+"enable visible whitespace
+set listchars=tab:»·,trail:·,precedes:<,extends:>
+set list
 
 filetype plugin on
 filetype plugin indent on

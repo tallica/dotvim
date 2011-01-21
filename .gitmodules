@@ -34,3 +34,6 @@
 [submodule "bundle/textobj-indent"]
 	path = bundle/textobj-indent
 	url = git://github.com/kana/vim-textobj-indent.git
+[submodule "bundle/delimitmate"]
+	path = bundle/delimitmate
+	url = git://github.com/Raimondi/delimitMate.git

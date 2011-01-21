@@ -96,3 +96,13 @@ inoremap <Esc>8 <Esc>:8b<CR>
 inoremap <Esc>9 <Esc>:9b<CR>
 inoremap <Esc>0 <Esc>:10b<CR>
 
+"miniBufExplorer
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne = 0
+let g:miniBufExplModSelTarget = 0
+let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplVSplit = 25
+let g:miniBufExplSplitBelow = 1
+
+noremap <c-w><c-t> :TMiniBufExplorer<cr>

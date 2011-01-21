@@ -8,28 +8,34 @@ set showcmd
 set incsearch
 set nohlsearch
 set ruler
-set scrolloff=10
+set scrolloff=5
 set updatecount=50
 set laststatus=2
 set novisualbell
 set hidden
+set pastetoggle=<F3>
+set smartcase
+set ttimeoutlen=50
 
 "formatting
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 set expandtab
 set smarttab
 set autoindent
 set smartindent
+set copyindent
 set cindent
 
 "enable visible whitespace
 set listchars=tab:»·,trail:·,precedes:<,extends:>
 set list
 
-filetype plugin on
-filetype plugin indent on
 syntax on
+filetype on
+filetype indent on
+filetype plugin on
 
 "tmp files
 set directory=/var/tmp/vim
@@ -126,3 +132,7 @@ noremap <c-w><c-t> :TMiniBufExplorer<cr>
 "Supertab
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabDefaultCompletionType = "context"
+
+"taglist
+let Tlist_Sort_Type = "order"
+let Tlist_Show_One_File = 1

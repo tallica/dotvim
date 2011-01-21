@@ -31,3 +31,6 @@
 [submodule "bundle/textobj-rubyblock"]
 	path = bundle/textobj-rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/textobj-indent"]
+	path = bundle/textobj-indent
+	url = git://github.com/kana/vim-textobj-indent.git

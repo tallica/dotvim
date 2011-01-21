@@ -13,7 +13,6 @@ set updatecount=50
 set laststatus=2
 set novisualbell
 set hidden
-set ofu=syntaxcomplete#Complete
 
 "formatting
 set tabstop=2
@@ -45,6 +44,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 "php
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php let php_sql_query = 1
 autocmd FileType php let php_htmlInStrings = 1
 autocmd FileType php let php_noShortTags = 1
@@ -58,13 +58,23 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
 
+"css
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+"html
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+"javascript
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
 nmap ,o o<Esc><Up>
 nmap ,O O<Esc><Down>
 
 "SmoothPageScroll
-map <PageDown> :call SmoothPageScrollDown()<CR>
-map <PageUp>   :call SmoothPageScrollUp()<CR>
-let g:smooth_page_scroll_delay = 1
+let g:smooth_page_scroll = 1
+"map <PageDown> :call SmoothPageScrollDown()<CR>
+"map <PageUp>   :call SmoothPageScrollUp()<CR>
+"let g:smooth_page_scroll_delay = 1
 
 "buffer mappings
 noremap <Esc>j :bp<CR>
@@ -95,6 +105,7 @@ inoremap <Esc>7 <Esc>:7b<CR>
 inoremap <Esc>8 <Esc>:8b<CR>
 inoremap <Esc>9 <Esc>:9b<CR>
 inoremap <Esc>0 <Esc>:10b<CR>
+inoremap <Esc>w <Esc>:w!<CR>i
 
 "miniBufExplorer
 let g:miniBufExplModSelTarget = 1
@@ -105,4 +116,13 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplVSplit = 25
 let g:miniBufExplSplitBelow = 1
 
+let g:bufExplorerSortBy = "name"
+
+autocmd BufRead,BufNew :call UMiniBufExplorer
+
+noremap <leader>u  :TMiniBufExplorer<cr>
 noremap <c-w><c-t> :TMiniBufExplorer<cr>
+
+"Supertab
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = "context"

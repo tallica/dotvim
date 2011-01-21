@@ -13,6 +13,7 @@ set scrolloff=10
 set updatecount=50
 set laststatus=2
 set novisualbell
+set hidden
 set ofu=syntaxcomplete#Complete
 
 "formatting
@@ -61,3 +62,34 @@ nmap ,O O<Esc><Down>
 map <PageDown> :call SmoothPageScrollDown()<CR>
 map <PageUp>   :call SmoothPageScrollUp()<CR>
 let g:smooth_page_scroll_delay = 1
+
+"buffer mappings
+noremap <Esc>j :bp<CR>
+noremap <Esc>k :bn<CR>
+noremap <Esc><Tab> :e#<CR>
+noremap <Esc>1 :1b<CR>
+noremap <Esc>2 :2b<CR>
+noremap <Esc>3 :3b<CR>
+noremap <Esc>4 :4b<CR>
+noremap <Esc>5 :5b<CR>
+noremap <Esc>6 :6b<CR>
+noremap <Esc>7 :7b<CR>
+noremap <Esc>8 :8b<CR>
+noremap <Esc>9 :9b<CR>
+noremap <Esc>0 :10b<CR>
+
+inoremap <Esc>j <Esc>:bp<CR>
+inoremap <Esc>k <Esc>:bn<CR>
+inoremap <Esc><Tab> <Esc>:e#<CR>
+inoremap <Esc>1 <Esc>:1b<CR>
+inoremap <Esc>2 <Esc>:2b<CR>
+inoremap <Esc>3 <Esc>:3b<CR>
+inoremap <Esc>3 <Esc>:3b<CR>
+inoremap <Esc>4 <Esc>:4b<CR>
+inoremap <Esc>5 <Esc>:5b<CR>
+inoremap <Esc>6 <Esc>:6b<CR>
+inoremap <Esc>7 <Esc>:7b<CR>
+inoremap <Esc>8 <Esc>:8b<CR>
+inoremap <Esc>9 <Esc>:9b<CR>
+inoremap <Esc>0 <Esc>:10b<CR>
+

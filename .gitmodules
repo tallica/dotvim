@@ -73,3 +73,6 @@
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = git://github.com/tpope/vim-speeddating
+[submodule "bundle/rake"]
+	path = bundle/rake
+	url = git://github.com/tpope/vim-rake.git

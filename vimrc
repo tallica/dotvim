@@ -16,6 +16,8 @@ set hidden
 set pastetoggle=<F3>
 set smartcase
 set ttimeoutlen=50
+set encoding=utf-8
+set fileencodings=utf-8
 
 "formatting
 set tabstop=2
@@ -83,35 +85,34 @@ let g:smooth_page_scroll = 1
 "let g:smooth_page_scroll_delay = 1
 
 "buffer mappings
-noremap <Esc>j :bp<CR>
-noremap <Esc>k :bn<CR>
-noremap <Esc><Tab> :e#<CR>
-noremap <Esc>1 :1b<CR>
-noremap <Esc>2 :2b<CR>
-noremap <Esc>3 :3b<CR>
-noremap <Esc>4 :4b<CR>
-noremap <Esc>5 :5b<CR>
-noremap <Esc>6 :6b<CR>
-noremap <Esc>7 :7b<CR>
-noremap <Esc>8 :8b<CR>
-noremap <Esc>9 :9b<CR>
-noremap <Esc>0 :10b<CR>
+noremap <M-j> :bp<CR>
+noremap <M-k> :bn<CR>
+noremap <M><Tab> :e#<CR>
+noremap <M-1> :1b<CR>
+noremap <M-2> :2b<CR>
+noremap <M-3> :3b<CR>
+noremap <M-4> :4b<CR>
+noremap <M-5> :5b<CR>
+noremap <M-6> :6b<CR>
+noremap <M-7> :7b<CR>
+noremap <M-8> :8b<CR>
+noremap <M-9> :9b<CR>
+noremap <M-0> :10b<CR>
 
-inoremap <Esc>j <Esc>:bp<CR>
-inoremap <Esc>k <Esc>:bn<CR>
-inoremap <Esc><Tab> <Esc>:e#<CR>
-inoremap <Esc>1 <Esc>:1b<CR>
-inoremap <Esc>2 <Esc>:2b<CR>
-inoremap <Esc>3 <Esc>:3b<CR>
-inoremap <Esc>3 <Esc>:3b<CR>
-inoremap <Esc>4 <Esc>:4b<CR>
-inoremap <Esc>5 <Esc>:5b<CR>
-inoremap <Esc>6 <Esc>:6b<CR>
-inoremap <Esc>7 <Esc>:7b<CR>
-inoremap <Esc>8 <Esc>:8b<CR>
-inoremap <Esc>9 <Esc>:9b<CR>
-inoremap <Esc>0 <Esc>:10b<CR>
-inoremap <Esc>w <Esc>:w!<CR>i
+inoremap <M-j> <Esc>:bp<CR>
+inoremap <M-k> <Esc>:bn<CR>
+inoremap <M><Tab> <Esc>:e#<CR>
+inoremap <M-1> <Esc>:1b<CR>
+inoremap <M-2> <Esc>:2b<CR>
+inoremap <M-3> <Esc>:3b<CR>
+inoremap <M-4> <Esc>:4b<CR>
+inoremap <M-5> <Esc>:5b<CR>
+inoremap <M-6> <Esc>:6b<CR>
+inoremap <M-7> <Esc>:7b<CR>
+inoremap <M-8> <Esc>:8b<CR>
+inoremap <M-9> <Esc>:9b<CR>
+inoremap <M-0> <Esc>:10b<CR>
+inoremap <M-w> <Esc>:w!<CR>i
 
 "miniBufExplorer
 let g:miniBufExplModSelTarget = 1
@@ -129,6 +130,9 @@ autocmd BufRead,BufNew :call UMiniBufExplorer
 noremap <leader>u  :TMiniBufExplorer<cr>
 noremap <c-w><c-t> :TMiniBufExplorer<cr>
 
+"Toggle whitespaces
+noremap <F2> :set list!<cr>
+
 "Supertab
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabDefaultCompletionType = "context"
@@ -137,6 +141,49 @@ let g:SuperTabDefaultCompletionType = "context"
 let Tlist_Sort_Type = "order"
 let Tlist_Show_One_File = 1
 
+"Commandline mappings
+cnoremap <c-a> <Home>
+cnoremap <c-p> <Up>
+cnoremap <c-n> <Down>
+cnoremap <c-f> <Right>
+cnoremap <c-b> <Left>
+cnoremap <c-d> <Delete>
+
+"Insert-mode mappings
+noremap! <c-a> <Home>
+noremap! <c-e> <End>
+noremap! <c-p> <Up>
+noremap! <c-n> <Down>
+noremap! <c-f> <Right>
+noremap! <c-b> <Left>
+
+" Emacs style mappings
+inoremap          <C-A> <C-O>^
+cnoremap          <C-A> <Home>
+" If at end of a line of spaces, delete back to the previous line.
+" Otherwise, <Left>
+inoremap <silent> <C-B> <C-R>=getline('.')=~'^\s*$'&&col('.')>strlen(getline('.'))?"0\<Lt>C-D>\<Lt>Esc>kJs":"\<Lt>Left>"<CR>
+cnoremap          <C-B> <Left>
+" If at end of line, decrease indent, else <Del>
+inoremap <silent> <C-D> <C-R>=col('.')>strlen(getline('.'))?"\<Lt>C-D>":"\<Lt>Del>"<CR>
+cnoremap          <C-D> <Del>
+" If at end of line, fix indent, else <Right>
+inoremap <silent> <C-F> <C-R>=col('.')>strlen(getline('.'))?"\<Lt>C-F>":"\<Lt>Right>"<CR>
+cnoremap          <C-F> <Right>
+inoremap          <C-E> <End>
+cnoremap          <C-E> <End>
+noremap!          <M-a> <C-O>(
+map!              <M-b> <S-Left>
+noremap!          <M-d> <C-O>dw
+noremap!          <M-e> <C-O>)
+map!              <M-f> <S-Right>
+noremap!          <M-h> <C-W>
+noremap           <M-l> guiww
+noremap           <M-u> gUiww
+noremap!          <M-l> <Esc>guiw`]a
+noremap!          <M-u> <Esc>gUiw`]a
+noremap!          <M-{> <C-O>{
+noremap!          <M-}> <C-O>}
 
 "FUNCTIONS
 
@@ -150,3 +197,8 @@ endfunction
 
 " Run :FixWhitespace to remove end of line white space.
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
+
+"Chapa
+let g:chapa_default_mappings = 1
+
+let loaded_matchparen = 1

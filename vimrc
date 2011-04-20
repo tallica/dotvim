@@ -1,3 +1,5 @@
+call pathogen#runtime_append_all_bundles()
+
 set nocompatible
 set backspace=indent,eol,start
 set nobackup
@@ -42,8 +44,6 @@ filetype plugin on
 "tmp files
 set directory=/var/tmp/vim
 
-call pathogen#runtime_append_all_bundles()
-
 "colorschemes
 colorscheme railscasts
 
@@ -74,9 +74,6 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 "javascript
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-
-nmap ,o o<Esc><Up>
-nmap ,O O<Esc><Down>
 
 "SmoothPageScroll
 let g:smooth_page_scroll = 1
@@ -201,4 +198,8 @@ command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 "Chapa
 let g:chapa_default_mappings = 1
 
+"Disable matching parenthesis highlighting
 let loaded_matchparen = 1
+
+"Disable miniBufExpl plugin
+let loaded_minibufexplorer = 1

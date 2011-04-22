@@ -140,6 +140,10 @@ let g:chapa_default_mappings = 1
 "Disable matching parenthesis highlighting
 let loaded_matchparen = 1
 
+"Command-T
+nmap <silent> <Leader>m :CommandT<CR>
+nmap <silent> <Leader>l :CommandTBuffer<CR>
+
 "FUNCTIONS
 
 "FixWhitespace

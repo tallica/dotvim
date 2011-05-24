@@ -69,6 +69,7 @@ autocmd FileType php let php_sql_query = 1
 autocmd FileType php let php_htmlInStrings = 1
 autocmd FileType php let php_noShortTags = 1
 autocmd FileType php let php_folding = 0
+autocmd FileType php set noexpandtab
 
 "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete

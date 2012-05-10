@@ -9,10 +9,10 @@
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = git@github.com:tallicapl/snipmate.vim.git
+	url = git@github.com:tallica/snipmate.vim.git
 [submodule "bundle/snipmate-snippets/snippets"]
 	path = bundle/snipmate-snippets/snippets
-	url = git@github.com:tallicapl/snipmate-snippets.git
+	url = git@github.com:tallica/snipmate-snippets.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
